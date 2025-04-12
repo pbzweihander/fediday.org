@@ -1,0 +1,26 @@
+name: check
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container: node:20
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/cache@v4
+      with:
+        path: node_modules
+        key: node-modules-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+        restore-keys: |
+          node-modules-${{ runner.os }}-
+    - name: Install dependencies
+      run: |
+        yarn install --frozen-lockfile
+    - name: Check formatting
+      run: |-
+        yarn prettier:check
