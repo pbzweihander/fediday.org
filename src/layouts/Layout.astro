@@ -1,0 +1,43 @@
+---
+import * as types from "@types";
+import Logo from "@assets/fediverse.svg";
+import { getRelativeLocaleUrl } from "astro:i18n";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/fediverse.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Happy Fediverse Day!</title>
+  </head>
+  <body>
+    <div class="px-2 py-4 md:px-6 md:py-10">
+      <Logo class="mx-auto mb-10" />
+      <slot />
+      <div class="flex gap-2 justify-center mt-30">
+        {
+          types.languages.options.map((lang) => (
+            <a
+              class="text-blue-600 underline text-lg"
+              href={getRelativeLocaleUrl(lang, "")}
+            >
+              {lang}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

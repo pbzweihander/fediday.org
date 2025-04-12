@@ -1,0 +1,29 @@
+---
+import Day from "@components/Day.astro";
+import { getCollection } from "astro:content";
+import type { z } from "astro/zod";
+import type * as types from "@types";
+
+interface Props {
+  lang: z.infer<typeof types.languages>;
+}
+
+const { lang } = Astro.props;
+const days = await getCollection("days");
+days.sort((a, b) => a.data.date.slice(5).localeCompare(b.data.date.slice(5)));
+---
+
+<table class="w-full">
+  <thead class="hidden">
+    <tr>
+      <th>Year</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {days.map((day) => <Day lang={lang} day={day} />)}
+    <tr><td></td><td></td><td class="p-1 text-gray-500">...</td></tr>
+  </tbody>
+</table>

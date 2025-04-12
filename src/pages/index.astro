@@ -1,0 +1,54 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "@styles/global.css";
+import Days from "@layouts/Days.astro";
+import Quote1 from "@components/quote/pbzweihander.html";
+import Quote2 from "@components/quote/dazeemdas.html";
+import Quote3 from "@components/quote/robin_maki.html";
+---
+
+<Layout>
+  <h1 class="text-3xl font-bold text-center mb-10">Happy Fediverse Day!</h1>
+  <h2 class="text-xl text-center mb-4">Fediverse is (maybe) today!</h2>
+  <p class="w-2xl mx-auto mb-10">
+    Everyday can be Fediverse day! Following the federated nature of the
+    fediverse, we are celebrating every memorable day related to the fediverse.
+    So, a <b>Federated Fediverse Day</b>!
+  </p>
+  <h2 class="text-xl text-center mb-4">Background</h2>
+  <div class="flex gap-2 justify-center items-stretch mb-4">
+    <div class="w-sm">
+      <Quote1 />
+      <div class="text-gray-500 text-sm p-1">
+        Isn't there such a thing as a Fediverse Day? If not, can we organize one
+        of our own? At least we could organize a Fediverse Day of Korean
+        speaking users or something?
+      </div>
+    </div>
+    <div class="w-sm">
+      <Quote2 />
+      <div class="text-gray-500 text-sm p-1">Today is the Fediverse Day</div>
+    </div>
+    <div class="w-sm">
+      <Quote3 />
+      <div class="text-gray-500 text-sm p-1">
+        Fediverse Day: Celebrating the day we decided to make a Fediverse day
+      </div>
+    </div>
+  </div>
+  <p class="w-2xl mx-auto mb-10 break-keep">
+    We celebrate the day a user mention "Why there is no Fediverse day?". We
+    call that day, April 11th, the <b>Federated Fediverse Day</b>.
+  </p>
+  <h2 class="text-xl text-center mb-4">There are many days to celebrate</h2>
+  <div class="w-3xl mx-auto mb-10">
+    <Days lang="en" />
+  </div>
+  <h2 class="text-center text-2xl text-bold mb-20">
+    Want to add a new day? Send PR or issue to <a
+      class="text-blue-600 underline"
+      href="https://github.com/pbzweihander/fediday.org"
+      target="_blank">GitHub repository</a
+    >!
+  </h2>
+</Layout>

@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type * as types from "@types";
+import type { z } from "astro/zod";
+
+interface Props {
+  lang: z.infer<typeof types.languages>;
+  day: CollectionEntry<"days">;
+}
+
+const { lang, day } = Astro.props;
+
+const dateYear = day.data.date.slice(0, 4);
+const dateMonth = day.data.date.slice(5, 7);
+const dateDay = day.data.date.slice(8, 10);
+---
+
+<tr>
+  <td class="text-sm p-1 align-middle">
+    {dateYear !== "0000" && dateYear}
+  </td>
+  <td class="text-lg p-1 align-middle border-l-1 border-l-gray-300">
+    {dateMonth}-{dateDay}
+  </td>
+  <td class="text-lg font-bold p-1 align-middle">
+    {
+      day.data.link != null ? (
+        <a
+          href={day.data.link}
+          target="_blank"
+          class="hover:text-blue-600 hover:underline"
+        >
+          {day.data.name[lang] ?? day.data.name.en}
+        </a>
+      ) : (
+        (day.data.name[lang] ?? day.data.name.en)
+      )
+    }
+  </td>
+  <td class="p-1 align-middle"
+    >{
+      day.data.description &&
+        (day.data.description[lang] ?? day.data.description.en)
+    }</td
+  >
+</tr>

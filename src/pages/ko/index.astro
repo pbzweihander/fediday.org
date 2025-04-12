@@ -1,0 +1,53 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "@styles/global.css";
+import Days from "@layouts/Days.astro";
+import Quote1 from "@components/quote/pbzweihander.html";
+import Quote2 from "@components/quote/dazeemdas.html";
+import Quote3 from "@components/quote/robin_maki.html";
+---
+
+<Layout>
+  <h1 class="text-3xl font-bold text-center mb-10">
+    연합우주의 날을 축하해요!
+  </h1>
+  <h2 class="text-xl text-center mb-4">
+    연합우주의 날은, 아마 오늘이 아닐까요?
+  </h2>
+  <p class="w-2xl mx-auto mb-10">
+    어떤 날도 연합우주의 날이 될 수 있답니다! 연합형 커뮤니티인 연합우주의
+    특성상, 연합우주와 관련된 각자의 기념하고 싶은 날을 기념해서, <b
+      >연합형 기념일</b
+    >을 만들기로 했어요!
+  </p>
+  <h2 class="text-xl text-center mb-4">만들어지게 된 계기</h2>
+  <div class="flex gap-2 justify-center items-stretch mb-4">
+    <div class="w-sm">
+      <Quote1 />
+    </div>
+    <div class="w-sm">
+      <Quote2 />
+    </div>
+    <div class="w-sm">
+      <Quote3 />
+    </div>
+  </div>
+  <p class="w-2xl mx-auto mb-10 break-keep">
+    한 유저가 '연합우주의 날은 없을까?'라는 글을 올린 것을 계기로 이러한 날이
+    만들어졌어요. 이 4월 11일을 <b>연합형 연합우주의 날</b>이라고 부르기로
+    했어요!
+  </p>
+  <h2 class="text-xl text-center mb-4">
+    그러면 연합우주에는 어떠한 기념할만한 날들이 있을까요?
+  </h2>
+  <div class="w-3xl mx-auto mb-20">
+    <Days lang="ko" />
+  </div>
+  <h2 class="text-center text-2xl text-bold mb-20">
+    기념일을 추가하고 싶나요? <a
+      class="text-blue-600 underline"
+      href="https://github.com/pbzweihander/fediday.org"
+      target="_blank">GitHub 저장소</a
+    >에 PR 또는 이슈를 남겨주세요!
+  </h2>
+</Layout>
