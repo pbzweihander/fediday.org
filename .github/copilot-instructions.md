@@ -3,6 +3,7 @@ This repository contains a multilingual website celebrating various days related
 For JavaScript and TypeScript code, use double quotes for strings and follow the project's Prettier configuration.
 
 When working with internationalization (i18n):
+
 - The project currently supports English (en) and Korean (ko) languages
 - English is the default and fallback language
 - When adding new language support, update these files:
@@ -12,6 +13,7 @@ When working with internationalization (i18n):
   4. Update `src/data/day/README.md` to list the newly supported language
 
 When adding new days to the Fediverse calendar:
+
 - Add YAML files to `src/data/day` directory
 - Follow the format specified in `src/data/day/README.md`
 - Ensure dates are in `YYYY-MM-DD` format
@@ -20,11 +22,13 @@ When adding new days to the Fediverse calendar:
 - Provide translations for supported languages when possible
 
 For Astro components:
+
 - Use React-style props with TypeScript interfaces
 - Leverage Tailwind CSS for styling
 - Follow the existing component patterns in the project
 
 This project uses:
+
 - Astro framework
 - TypeScript
 - Tailwind CSS
