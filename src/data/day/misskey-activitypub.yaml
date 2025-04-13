@@ -3,5 +3,5 @@ link: https://github.com/misskey-dev/misskey/pull/1341
 name:
   en: The initial implementation of ActivityPub in Misskey
   ko: 미스키의 액티비티펍 최초 구현일
-  zh-cn: Reni 的诞生
-  ja: Misskey 的 ActivityPub 首次实施日期
+  zh-cn: Misskey 的 ActivityPub 首次实施日期
+  ja: MisskeyのActivityPub最初実装日
