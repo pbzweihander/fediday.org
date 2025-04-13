@@ -19,7 +19,7 @@
 
 ### 번역 추가
 
-모든 로캘은 소문자여야 합니다. [이는 astro의 국제화 방식을 따릅니다]([https://docs.astro.build/en/reference/modules/astro-i18n/#getrelativelocaleurl](https://docs.astro.build/ko/reference/modules/astro-i18n/#getrelativelocaleurl)).
+모든 로캘은 소문자여야 합니다. [이는 astro의 국제화 방식을 따릅니다](https://docs.astro.build/ko/reference/modules/astro-i18n/#getrelativelocaleurl).
 
 1. `astro.config.mjs`에서 `locales` 필드를 수정하세요
 2. `src/types.ts`에서 `multiLanguageObject` zod 객체 정의를 수정하세요 
