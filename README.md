@@ -1,5 +1,7 @@
 # fediday.org - the Federated Fediverse Day
 
+_You can also read this README in [한국어](README.ko.md)!_
+
 ## What?
 
 We celebrate every memorable day related to the Fediverse.
