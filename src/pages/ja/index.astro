@@ -1,0 +1,51 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "@styles/global.css";
+import Days from "@layouts/Days.astro";
+import Quote1 from "@components/quote/pbzweihander.html";
+import Quote2 from "@components/quote/dazeemdas.html";
+import Quote3 from "@components/quote/robin_maki.html";
+---
+
+<Layout>
+  <h1 class="text-3xl font-bold text-center mb-10">
+    フェディバースの日、おめでとう！
+  </h1>
+  <h2 class="text-xl text-center mb-4">
+    フェディバースの日は（たぶん）今日です！
+  </h2>
+  <p class="w-2xl mx-auto mb-10">
+    毎日がフェディバースの日になれます！フェディバースの連合型の性質に従って、
+    フェディバースに関連するすべての記念日を祝っています。
+    つまり、<b>連合型フェディバースの日</b>です！
+  </p>
+  <h2 class="text-xl text-center mb-4">背景</h2>
+  <div class="flex gap-2 justify-center items-stretch mb-4">
+    <div class="w-sm">
+      <Quote1 />
+    </div>
+    <div class="w-sm">
+      <Quote2 />
+    </div>
+    <div class="w-sm">
+      <Quote3 />
+    </div>
+  </div>
+  <p class="w-2xl mx-auto mb-10 break-keep">
+    あるユーザーが「フェディバースの日はないのか？」と言及した日を祝います。
+    その日、4月11日を<b>連合型フェディバースの日</b>と呼びます。
+  </p>
+  <h2 class="text-xl text-center mb-4">
+    祝うべき日はたくさんあります
+  </h2>
+  <div class="w-3xl mx-auto mb-20">
+    <Days lang="ja" />
+  </div>
+  <h2 class="text-center text-2xl text-bold mb-20">
+    新しい日を追加したいですか？<a
+      class="text-blue-600 underline"
+      href="https://github.com/pbzweihander/fediday.org"
+      target="_blank">GitHubリポジトリ</a
+    >にPRまたはissueを送ってください！
+  </h2>
+</Layout>
