@@ -19,7 +19,7 @@ Add a YAML file to `src/data/day`, Or create a new issue describing the day.
 
 1. Modify `locales` field in `astro.config.mjs`
 2. Modify `multiLanguageObject` zod object definition in `src/types.ts`
-3. Add `src/pages/<locale>/index.astro`
+3. Add `src/pages/<locale>/index.astro`, with `<locale>` in lowercase ([This is quirk of astro i18n](https://docs.astro.build/en/reference/modules/astro-i18n/#getrelativelocaleurl))
 4. Update `src/data/day/README.md` for 'supported languages'
 5. (Optional) Add translation of names and descriptions of the days in `src/data/day`
 
