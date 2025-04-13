@@ -15,20 +15,23 @@ import { getRelativeLocaleUrl } from "astro:i18n";
   </head>
   <body>
     <div class="px-2 py-4 md:px-6 md:py-10">
-      <Logo class="mx-auto mb-10" />
-      <slot />
-      <div class="flex gap-2 justify-center mt-30">
+      <Logo class="mx-auto mb-8" />
+      <div class="flex gap-2 justify-center mb-8">
         {
           types.languages.options.map((lang) => (
             <a
               class="text-blue-600 underline text-lg"
               href={getRelativeLocaleUrl(lang, "")}
             >
-              {new Intl.DisplayNames([lang], { type: "language" }).of(lang)}
+              {(
+                new Intl.DisplayNames([lang], { type: "language" }).of(lang) ??
+                lang
+              ).trim()}
             </a>
           ))
         }
       </div>
+      <slot />
     </div>
   </body>
 </html>
