@@ -12,6 +12,7 @@ export default defineConfig({
     locales: [
       "en",
       "ko",
+      "ja",
       // Add new locale here
     ],
     defaultLocale: "en",
