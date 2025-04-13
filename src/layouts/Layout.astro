@@ -24,7 +24,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
               class="text-blue-600 underline text-lg"
               href={getRelativeLocaleUrl(lang, "")}
             >
-              {lang}
+              {new Intl.DisplayNames([lang], { type: "language" }).of(lang)}
             </a>
           ))
         }
