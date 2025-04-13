@@ -14,7 +14,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
     <meta property="og:url" content="https://fediday.org/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Fediverse Day" />
-    <meta property="og:image" content="/og.png" />
+    <meta property="og:image" content={new URL("og.png", Astro.site)} />
     <meta
       property="og:image:alt"
       content="Fediverse Day: The Federated Fediverse Day"
