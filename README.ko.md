@@ -1,4 +1,4 @@
-# fediday.org - 연합형 
+# fediday.org - 연합형 연합우주의 날
 
 이 도움말은 [영어](README.md)로도 읽으실 수 있습니다!
 
