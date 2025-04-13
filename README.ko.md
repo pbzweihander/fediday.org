@@ -22,7 +22,7 @@
 모든 로캘은 소문자여야 합니다. [이는 astro의 국제화 방식을 따릅니다](https://docs.astro.build/ko/reference/modules/astro-i18n/#getrelativelocaleurl).
 
 1. `astro.config.mjs`에서 `locales` 필드를 수정하세요
-2. `src/types.ts`에서 `multiLanguageObject` zod 객체 정의를 수정하세요 
+2. `src/types.ts`에서 `multiLanguageObject` zod 객체 정의를 수정하세요
 3. `src/pages/<locale>/index.astro`를 추가하세요
    - `index.astro`에서 `<Days lang="<locale>" />`이 제대로 들어갔는지 꼭 확인해주세요!
 4. `src/data/day/README.md`에 지원 언어를 추가해주세요

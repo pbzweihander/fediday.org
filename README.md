@@ -1,6 +1,6 @@
 # fediday.org - the Federated Fediverse Day
 
-*You can also read this README in [한국어](README.ko.md)!*
+_You can also read this README in [한국어](README.ko.md)!_
 
 ## What?
 
