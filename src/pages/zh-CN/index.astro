@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "@styles/global.css";
+import Days from "@layouts/Days.astro";
+import Quote1 from "@components/quote/pbzweihander.html";
+import Quote2 from "@components/quote/dazeemdas.html";
+import Quote3 from "@components/quote/robin_maki.html";
+---
+
+<Layout>
+  <h1 class="text-3xl font-bold text-center mb-10">联邦宇宙日快乐！</h1>
+  <h2 class="text-xl text-center mb-4">联邦宇宙日（可能）就在今天！</h2>
+  <p class="max-w-2xl w-full mx-auto mb-10">
+    每一天都能成为联邦宇宙日！跟着联邦宇宙联合的性质，我们庆祝每个跟联邦宇宙相关，值得纪念的日子。所以，这是一个<b
+      >联合联邦宇宙日</b
+    >！
+  </p>
+  <h2 class="text-xl text-center mb-4">背景</h2>
+  <div class="flex gap-2 justify-center items-stretch mb-4 overflow-x-auto">
+    <div class="w-sm">
+      <Quote1 />
+      <div class="text-gray-500 text-sm p-1">
+        就是啊，联邦宇宙日之类的没有吗？如果没有的话，我们自己定一个来纪念不也挺好？至少定个韩语圈联邦宇宙日之类的日子不也可以吗？
+      </div>
+    </div>
+    <div class="w-sm">
+      <Quote2 />
+      <div class="text-gray-500 text-sm p-1">今天就是联邦宇宙日</div>
+    </div>
+    <div class="w-sm">
+      <Quote3 />
+      <div class="text-gray-500 text-sm p-1">
+        联邦宇宙日：纪念提议设立联邦宇宙日的日子
+      </div>
+    </div>
+  </div>
+  <p class="max-w-2xl w-full mx-auto mb-10 break-keep">
+    我们庆祝有人提起“为什么没有‘联邦宇宙日’”的那一天。我们把那一天，即 4 月 11
+    日，叫做<b>联合联邦宇宙日</b>。
+  </p>
+  <h2 class="text-xl text-center mb-4">很多日子值得庆祝：</h2>
+  <div class="max-w-3xl w-full mx-auto mb-10">
+    <Days lang="en" />
+  </div>
+  <h2 class="text-center text-2xl text-bold mb-20">
+    想要加一个新的纪念日？到 <a
+      class="text-blue-600 underline"
+      href="https://github.com/pbzweihander/fediday.org"
+      target="_blank">GitHub 仓库</a
+    > 投个 PR 或工单！
+  </h2>
+</Layout>
