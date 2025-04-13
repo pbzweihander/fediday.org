@@ -12,7 +12,7 @@ export default defineConfig({
     locales: [
       "en",
       "ko",
-      "zh-CN",
+      "zh-cn",
       "ja",
       // Add new locale here
     ],
