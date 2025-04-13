@@ -2,10 +2,12 @@
 import * as types from "@types";
 import Logo from "@assets/fediverse.svg";
 import { getRelativeLocaleUrl } from "astro:i18n";
+const { title } = Astro.props;
+const currentLocale = Astro.currentLocale ?? "en";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -13,31 +15,50 @@ import { getRelativeLocaleUrl } from "astro:i18n";
     <meta name="generator" content={Astro.generator} />
     <meta property="og:url" content="https://fediday.org/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Fediverse Day" />
+    <meta property="og:title" content={title} />
     <meta property="og:image" content={new URL("og.png", Astro.site)} />
     <meta
       property="og:image:alt"
       content="Fediverse Day: The Federated Fediverse Day"
     />
     <meta property="og:description" content="The Federated Fediverse Day" />
-    <title>Happy Fediverse Day!</title>
+    <meta property="og:locale" content={currentLocale.replaceAll("-", "_")} />
+    {
+      types.languages.options
+        .filter((l) => l != currentLocale)
+        .map((lang) => (
+          <meta
+            property="og:locale:alternate"
+            content={lang.replaceAll("-", "_")}
+          />
+        ))
+    }
+    <title>{title}</title>
   </head>
   <body>
     <div class="px-2 py-4 md:px-6 md:py-10">
       <Logo class="mx-auto mb-8" />
       <div class="flex gap-2 justify-center mb-8">
         {
-          types.languages.options.map((lang) => (
-            <a
-              class="text-blue-600 underline text-lg"
-              href={getRelativeLocaleUrl(lang, "")}
-            >
-              {(
-                new Intl.DisplayNames([lang], { type: "language" }).of(lang) ??
-                lang
-              ).trim()}
-            </a>
-          ))
+          types.languages.options.map((lang) => {
+            const nativeName = (
+              new Intl.DisplayNames([lang], { type: "language" }).of(lang) ??
+              lang
+            ).trim();
+            return currentLocale === lang ? (
+              <strong class="text-lg">{nativeName}</strong>
+            ) : (
+              <a
+                class="text-blue-600 underline text-lg"
+                rel="alternate"
+                href={getRelativeLocaleUrl(lang, "")}
+                lang={lang}
+                hreflang={lang}
+              >
+                {nativeName}
+              </a>
+            );
+          })
         }
       </div>
       <slot />
