@@ -3,6 +3,7 @@ import { z } from "astro:content";
 const multiLanguageObject = z.object({
   en: z.string(),
   ko: z.string().optional(),
+  "zh-CN": z.string().optional(),
   // Add new locale here
 });
 export const languages = multiLanguageObject.keyof();

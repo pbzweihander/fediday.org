@@ -20,7 +20,7 @@ name:
   # Required. Fallback language
   en: Fediverse Day
   # You can add other language
-  # Currently supported languages: ko
+  # Currently supported languages: ko, zh-CN
   #ko: 연합우주의 날
 
 # Description of the day
@@ -29,6 +29,6 @@ description:
   # If you want to provide description, `en` field is required. Fallback language
   en: The day of the Fediverse of the Fediversian people!
   # You can add other language
-  # Currently supported languages: ko
+  # Currently supported languages: ko, zh-CN
   #ko: 연합우주인들의 연합우주의 날
 ```
