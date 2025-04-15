@@ -22,5 +22,8 @@ jobs:
       run: |
         yarn install --frozen-lockfile
     - name: Check formatting
-      run: |-
+      run: |
         yarn prettier:check
+    - name: Check with Astro
+      run: |-
+        yarn astro check
