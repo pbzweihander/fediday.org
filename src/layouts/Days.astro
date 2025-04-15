@@ -10,7 +10,27 @@ interface Props {
 
 const { lang } = Astro.props;
 const days = await getCollection("days");
-days.sort((a, b) => a.data.date.slice(5).localeCompare(b.data.date.slice(5)));
+days.sort((a, b) => {
+  // those strings consists of ascii numeral digits so we do not need to use `localeCompare`
+  const aMonthDay = a.data.date.slice(5);
+  const bMonthDay = b.data.date.slice(5);
+  if (aMonthDay < bMonthDay) {
+    return -1;
+  } else if (aMonthDay > bMonthDay) {
+    return 1;
+  } else {
+    const aYear = a.data.date.slice(0, 4);
+    const bYear = b.data.date.slice(0, 4);
+    if (aYear < bYear) {
+      return -1;
+    } else if (aYear > bYear) {
+      return 1;
+    } else {
+      // if all same, use name
+      return a.data.name.en.localeCompare(b.data.name.en);
+    }
+  }
+});
 ---
 
 <table class="w-full">
