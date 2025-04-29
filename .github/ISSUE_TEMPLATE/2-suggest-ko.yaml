@@ -1,0 +1,45 @@
+name: 새 기념일 제안
+description: 축하할 새 기념일을 제안해주세요
+labels: ["new-day"]
+body:
+- type: input
+  id: date
+  attributes:
+    label: 기념일의 날짜 (년도는 선택)
+    placeholder: ex. 2025-04-29, 04-29
+  validations:
+    required: true
+- type: input
+  id: name
+  attributes:
+    label: 기념일의 이름 (혹은 짧은 설명) (영어로)
+    placeholder: ex. FediSoftware's birthday
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: 기념일의 설명 (영어로, 선택)
+    placeholder: ex. The FediSoftware was first released this day
+  validations:
+    required: false
+- type: input
+  id: link
+  attributes:
+    label: 연관된 웹 페이지로의 링크 (선택)
+    placeholder: ex. https://example.com
+  validations:
+    required: false
+- type: textarea
+  id: translation
+  attributes:
+    label: 이름 혹은 설명에 대한 번역들 (선택)
+    placeholder: "ex. Korean name: 연합말랑이의 탄생일"
+  validations:
+    required: false
+- type: textarea
+  id: note
+  attributes:
+    label: 비고 (선택)
+  validations:
+    required: false

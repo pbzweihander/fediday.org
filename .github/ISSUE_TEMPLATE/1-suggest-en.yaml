@@ -1,0 +1,45 @@
+name: Suggest a new day
+description: Suggest a new day to celebrate
+labels: ["new-day"]
+body:
+- type: input
+  id: date
+  attributes:
+    label: Date of the day (year is optional)
+    placeholder: ex. 2025-04-29, 04-29
+  validations:
+    required: true
+- type: input
+  id: name
+  attributes:
+    label: Name (or short description) of the day (in English)
+    placeholder: ex. FediSoftware's birthday
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: Description of the day (in English, optional)
+    placeholder: ex. The FediSoftware was first released this day
+  validations:
+    required: false
+- type: input
+  id: link
+  attributes:
+    label: Link to the relevant web page (optional)
+    placeholder: ex. https://example.com
+  validations:
+    required: false
+- type: textarea
+  id: translation
+  attributes:
+    label: Translations of name or description (optional)
+    placeholder: "ex. Korean name: 연합말랑이의 탄생일"
+  validations:
+    required: false
+- type: textarea
+  id: note
+  attributes:
+    label: Additional note (optional)
+  validations:
+    required: false
