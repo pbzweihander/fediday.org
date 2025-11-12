@@ -1,0 +1,12 @@
+date: "2024-03-08"
+link: https://fedify.dev/
+name:
+  en: The first release of Fedify
+  ko: Fedify의 첫 번째 릴리스
+  ja: Fedifyの最初のリリース
+  zh-cn: Fedify的首次发布
+description:
+  en: The first release of Fedify, an ActivityPub server framework for JavaScript/TypeScript
+  ko: JavaScript/TypeScript용 ActivityPub 서버 프레임워크인 Fedify의 첫 번째 릴리스
+  ja: JavaScript/TypeScript向けのActivityPubサーバーフレームワークであるFedifyの最初のリリース
+  zh-cn: 用于 JavaScript/TypeScript 的 ActivityPub 服务器框架 Fedify 的首个发行版
